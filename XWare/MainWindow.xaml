@@ -9,10 +9,10 @@
     <Grid>
         <Label x:Name="label1" Content="NCX News+" HorizontalAlignment="Left" Height="56" Margin="10,0,0,0" VerticalAlignment="Top" Width="224" Foreground="White" FontSize="36" FontWeight="Bold"/>
         <Label Content="The only source of NCX-related news." HorizontalAlignment="Left" Margin="13,56,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
-        <Label x:Name="label2" Content="Edition" HorizontalAlignment="Left" Margin="13,102,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label x:Name="label3" Content="Date" HorizontalAlignment="Left" Margin="13,123,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <TextBlock x:Name="textblock" HorizontalAlignment="Left" Margin="13,154,0,0" Text="News Content" TextWrapping="Wrap" VerticalAlignment="Top" Height="159" Width="540" Foreground="White"/>
-        <Label Content="BETA" HorizontalAlignment="Left" Margin="638,0,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <Label x:Name="label2" Content="Edition" HorizontalAlignment="Left" Margin="13,102,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <Label x:Name="label3" Content="Date" HorizontalAlignment="Left" Margin="13,123,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <TextBlock x:Name="textblock" HorizontalAlignment="Left" Margin="13,157,0,0" Text="News Content" TextWrapping="Wrap" VerticalAlignment="Top" Height="159" Width="540" Foreground="White" FontSize="16"/>
+        <Label Content="v1.0" HorizontalAlignment="Left" Margin="638,0,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
 
     </Grid>
 </Window>
