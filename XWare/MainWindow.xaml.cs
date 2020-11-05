@@ -29,6 +29,22 @@ namespace XWare
             public string Edition { get; set; }
             public string Date { get; set; }
             public string Content { get; set; }
+            public string Line1 { get; set; }
+            public string Line2 { get; set; }
+            public string Line3 { get; set; }
+            public string Line4 { get; set; }
+            public string Line5 { get; set; }
+            public string Line6 { get; set; }
+            public string Line7 { get; set; }
+            public string Line8 { get; set; }
+            public string Line9 { get; set; }
+            public string Line10 { get; set; }
+            public string Line11 { get; set; }
+            public string Line12 { get; set; }
+            public string Line13 { get; set; }
+            public string Line14 { get; set; }
+            public string Line15 { get; set; }
+            public string Line16 { get; set; }
         }
 
         public MainWindow()
@@ -53,7 +69,24 @@ namespace XWare
 
             label2.Content = (news.Edition);
             label3.Content = (news.Date);
-            textblock.Text = (news.Content);
+            // Start with news content below
+            line1.Content = (news.Line1);
+            line2.Content = (news.Line2);
+            line3.Content = (news.Line3);
+            line4.Content = (news.Line4);
+            line5.Content = (news.Line5);
+            line6.Content = (news.Line6);
+            line7.Content = (news.Line7);
+            line8.Content = (news.Line8);
+            line9.Content = (news.Line9);
+            line10.Content = (news.Line10);
+            line11.Content = (news.Line11);
+            line12.Content = (news.Line12);
+            line13.Content = (news.Line13);
+            line14.Content = (news.Line14);
+            line15.Content = (news.Line15);
+            line16.Content = (news.Line16);
+
         }
     }
 }

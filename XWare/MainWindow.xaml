@@ -5,14 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XWare"
         mc:Ignorable="d"
-        Title="MainWindow" Height="357" Width="712" Background="Black">
+        Title="NCX-News+" Height="450" Width="712" Background="Black">
     <Grid>
         <Label x:Name="label1" Content="NCX News+" HorizontalAlignment="Left" Height="56" Margin="10,0,0,0" VerticalAlignment="Top" Width="224" Foreground="White" FontSize="36" FontWeight="Bold"/>
         <Label Content="The only source of NCX-related news." HorizontalAlignment="Left" Margin="13,56,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
-        <Label x:Name="label2" Content="Edition" HorizontalAlignment="Left" Margin="13,102,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
-        <Label x:Name="label3" Content="Date" HorizontalAlignment="Left" Margin="13,123,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
-        <TextBlock x:Name="textblock" HorizontalAlignment="Left" Margin="13,157,0,0" Text="News Content" TextWrapping="Wrap" VerticalAlignment="Top" Height="159" Width="540" Foreground="White" FontSize="16"/>
-        <Label Content="v1.0" HorizontalAlignment="Left" Margin="638,0,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <Label x:Name="label2" Content="Loading Edition Number..." HorizontalAlignment="Left" Margin="13,102,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <Label x:Name="label3" Content="Loading Date..." HorizontalAlignment="Left" Margin="13,123,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <Label Content="v1.1" HorizontalAlignment="Left" Margin="638,0,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+        <Label x:Name="line2" Content="" HorizontalAlignment="Left" Margin="18,175,0,0" VerticalAlignment="Top" Foreground="White" Width="662"/>
+        <Label x:Name="line1" Content="Loading the latest article, please wait..." HorizontalAlignment="Left" Margin="18,162,0,0" VerticalAlignment="Top" Foreground="White" Width="662"/>
+        <Label x:Name="line4" Content="" HorizontalAlignment="Left" Margin="18,201,0,0" VerticalAlignment="Top" Foreground="White" Width="662"/>
+        <Label x:Name="line3" Content="" HorizontalAlignment="Left" Margin="18,188,0,0" VerticalAlignment="Top" Foreground="White" Width="662"/>
+        <Label x:Name="line8" Content="" HorizontalAlignment="Left" Margin="18,253,0,0" VerticalAlignment="Top" Foreground="White" Width="662"/>
+        <Label x:Name="line7" Content="" HorizontalAlignment="Left" Margin="18,240,0,0" VerticalAlignment="Top" Foreground="White" Width="662"/>
+        <Label x:Name="line6" Content="" HorizontalAlignment="Left" Margin="18,227,0,0" VerticalAlignment="Top" Foreground="White" Width="662"/>
+        <Label x:Name="line5" Content="" HorizontalAlignment="Left" Margin="18,214,0,0" VerticalAlignment="Top" Foreground="White" Width="662"/>
+        <Label x:Name="line12" Content="" HorizontalAlignment="Left" Margin="18,305,0,0" VerticalAlignment="Top" Foreground="White" Width="662"/>
+        <Label x:Name="line11" Content="" HorizontalAlignment="Left" Margin="18,292,0,0" VerticalAlignment="Top" Foreground="White" Width="662"/>
+        <Label x:Name="line10" Content="" HorizontalAlignment="Left" Margin="18,279,0,0" VerticalAlignment="Top" Foreground="White" Width="662"/>
+        <Label x:Name="line9" Content="" HorizontalAlignment="Left" Margin="18,266,0,0" VerticalAlignment="Top" Foreground="White" Width="662"/>
+        <Label x:Name="line16" Content="" HorizontalAlignment="Left" Margin="18,357,0,0" VerticalAlignment="Top" Foreground="White" Width="662"/>
+        <Label x:Name="line15" Content="" HorizontalAlignment="Left" Margin="18,344,0,0" VerticalAlignment="Top" Foreground="White" Width="662"/>
+        <Label x:Name="line14" Content="" HorizontalAlignment="Left" Margin="18,331,0,0" VerticalAlignment="Top" Foreground="White" Width="662"/>
+        <Label x:Name="line13" Content="" HorizontalAlignment="Left" Margin="18,318,0,0" VerticalAlignment="Top" Foreground="White" Width="662"/>
 
     </Grid>
 </Window>

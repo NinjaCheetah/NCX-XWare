@@ -9,11 +9,14 @@
       Title="MainMenu" Background="Black">
 
     <Grid>
-        <Image HorizontalAlignment="Left" Height="222" Margin="201,-29,0,0" VerticalAlignment="Top" Width="544" Source="NCXCoreUpdaterInvert.png"/>
-        <Button Content="Release" HorizontalAlignment="Left" Height="50" Margin="294,281,0,0" VerticalAlignment="Top" Width="140" Background="Black" Foreground="White" FontSize="24"/>
-        <Button Content="Nightly" HorizontalAlignment="Left" Height="50" Margin="468,281,0,0" VerticalAlignment="Top" Width="140" Background="Black" Foreground="White" FontSize="24"/>
-        <Label Content="Latest Release: null" HorizontalAlignment="Left" Height="26" Margin="294,250,0,0" VerticalAlignment="Top" Width="124" Foreground="White"/>
-        <Label Content="Latest Nightly: null" HorizontalAlignment="Left" Margin="468,250,0,0" VerticalAlignment="Top" Width="125" Height="26" Foreground="White"/>
+        <Image Margin="0,0,230,146" Source="NCXCoreUpdaterInvert.png" Height="196" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="510"/>
+        <Button x:Name="btn1" Content="Release" Margin="0,0,466,11" Background="Black" Foreground="White" FontSize="24" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="140" Click="btn1_Click"/>
+        <Button x:Name="btn2" Content="Nightly" Margin="0,0,292,11" Background="Black" Foreground="White" FontSize="24" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="140" Click="btn2_Click"/>
+        <Label x:Name="label1" Content="Latest Release: null" Margin="0,0,482,61" Foreground="White" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="124"/>
+        <Label x:Name="label2" Content="Latest Nightly: null" Margin="0,0,245,61" Foreground="White" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="187"/>
+        <Button Content="About" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Height="23" Width="75" Foreground="White" Background="Black" Click="Button_Click" RenderTransformOrigin="0.487,0.978"/>
+        <ProgressBar x:Name="progressBar1" Height="21" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,175,0,0" Width="314" Background="#FF515151" Visibility="Hidden"/>
+        <Label x:Name="label3" Content="Downloading..." Margin="0,0,517,138" VerticalAlignment="Bottom"  HorizontalAlignment="Right" Foreground="White" Visibility="Hidden"/>
 
     </Grid>
 </Page>
