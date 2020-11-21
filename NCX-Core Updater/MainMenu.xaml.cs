@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Net;
@@ -65,7 +66,7 @@ namespace NCX_Core_Updater
                     
                 }
             }
-            else if (updateNum < releaseNum)
+            else
             {
                 string message = "There is an update to NCX-Core available: v" + releaseNum + ". You are currently running v" + updateNum + ". Would you like to update?";
                 string caption = "Update Available";
@@ -92,9 +93,9 @@ namespace NCX_Core_Updater
                 wc.DownloadFileCompleted += DownloadCompleted;
                 wc.DownloadFileAsync(
                     // Param1 = Link of file
-                    new System.Uri("https://github.com/NinjaCheetah/NCX-Core/releases/latest/download/NCXCore.zip"),
+                    new System.Uri("https://github.com/NinjaCheetah/NCX-Core/releases/latest/download/NCXCore-Setup.msi"),
                     // Param2 = Path to save
-                    System.IO.Path.Combine(ProgFilesPath, "NCXCore.zip")
+                    System.IO.Path.Combine(ProgFilesPath, "NCXCore-Setup.msi")
                 );
             }
         }
@@ -102,9 +103,12 @@ namespace NCX_Core_Updater
         public void DownloadCompleted(object sender, EventArgs e)
         {
             label3.Content = "Download Complete";
-            ZipFile.ExtractToDirectory(System.IO.Path.Combine(ProgFilesPath, "NCXCore.zip"), ProgFilesPath, true);
-            File.Delete(System.IO.Path.Combine(ProgFilesPath, "NCXCore.zip"));
-            label3.Content = "Installation Complete!";
+            Directory.SetCurrentDirectory(SavePath);
+            Process p = new Process();
+            p.StartInfo.FileName = "msiexec";
+            p.StartInfo.Arguments = "/i NCXCore-Setup.msi";
+            p.Start();
+            label3.Content = "Installing...";
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)
@@ -147,7 +151,7 @@ namespace NCX_Core_Updater
             label3.Content = "Downloading latest nightly...";
             using (WebClient wc = new WebClient())
             {
-                wc.DownloadFileCompleted += DownloadCompleted;
+                wc.DownloadFileCompleted += DownloadCompleted2;
                 wc.DownloadFileAsync(
                     // Param1 = Link of file
                     new System.Uri("https://github.com/NinjaCheetah/NCX-Core/raw/master/Beta/NCXCore.zip"),
@@ -155,6 +159,14 @@ namespace NCX_Core_Updater
                     System.IO.Path.Combine(ProgFilesPath, "NCXCore.zip")
                 );
             }
+        }
+
+        public void DownloadCompleted2(object sender, EventArgs e)
+        {
+            label3.Content = "Download Complete";
+            ZipFile.ExtractToDirectory(System.IO.Path.Combine(ProgFilesPath, "NCXCore.zip"), ProgFilesPath, true);
+            File.Delete(System.IO.Path.Combine(ProgFilesPath, "NCXCore.zip"));
+            label3.Content = "Installation Complete";
         }
     }
 }

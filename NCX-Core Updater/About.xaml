@@ -10,7 +10,7 @@
         <Label Content="NCX-Core Updater" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" FontWeight="Bold"/>
         <Label Content="©NinjaCheetah 2020" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontSize="20" Margin="0,80,0,0"/>
         <Label Content="v1.0" HorizontalAlignment="Center" Margin="0,43,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
-        <Label Content="Powered by the .NET Core 3.1" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontSize="20" Margin="0,104,0,0"/>
+        <Label Content="Powered by .NET 5.0" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontSize="20" Margin="0,104,0,0"/>
         <Label Content="Written in Microsoft Visual Studio 2019" HorizontalAlignment="Center" Margin="0,122,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
         <Button x:Name="btn1" Content="Discord" HorizontalAlignment="Left" Margin="10,0,0,35" Width="75" Foreground="White" Background="Black" Click="btn1_Click" Height="23" VerticalAlignment="Bottom"/>
         <Button x:Name="btn2" Content="GitHub" HorizontalAlignment="Left" Margin="90,0,0,35" Width="75" Foreground="White" Background="Black" Click="btn2_Click" Height="23" VerticalAlignment="Bottom"/>
