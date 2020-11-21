@@ -22,9 +22,9 @@ namespace NCX_Core_Updater
     /// </summary>
     public partial class MainMenu : Page
     {
-        public decimal updateNum;
+        public string updateNum;
         public string nupdateNum;
-        public decimal releaseNum;
+        public string releaseNum;
         public string nightlyNum;
         static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         static readonly string ProgFilesPath = "C:/Program Files/NCX/NCX-Core/";
@@ -34,7 +34,7 @@ namespace NCX_Core_Updater
             InitializeComponent();
             // Read latest release and set to the latest release label
             string text = File.ReadAllText(System.IO.Path.Combine(SavePath, "updateNotice.txt"));
-            releaseNum = Convert.ToDecimal(text);
+            releaseNum = Convert.ToString(text);
             label1.Content = "Latest Release: " + releaseNum;
             // Read latest nightly and set to the latest nightly label
             TextReader tr = new StreamReader(System.IO.Path.Combine(SavePath, "nightlyNotice.txt"));
@@ -54,7 +54,7 @@ namespace NCX_Core_Updater
         {
             label3.Content = "Fetching release data...";
             string text = File.ReadAllText(System.IO.Path.Combine(SavePath, "version.txt"));
-            updateNum = Convert.ToDecimal(text);
+            updateNum = Convert.ToString(text);
             if (updateNum == releaseNum)
             {
                 string message = "NCX-Core is up to date! (You're running NCX-Core v" + updateNum + ")";
