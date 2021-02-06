@@ -95,7 +95,7 @@ namespace NCX_Core_Updater
                     // Param1 = Link of file
                     new System.Uri("https://github.com/NinjaCheetah/NCX-Core/releases/latest/download/NCXCore-Setup.msi"),
                     // Param2 = Path to save
-                    System.IO.Path.Combine(ProgFilesPath, "NCXCore-Setup.msi")
+                    System.IO.Path.Combine(SavePath, "NCXCore-Setup.msi")
                 );
             }
         }
