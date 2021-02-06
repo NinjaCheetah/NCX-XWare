@@ -93,7 +93,7 @@ namespace NCX_Core_Updater
                 wc.DownloadFileCompleted += DownloadCompleted;
                 wc.DownloadFileAsync(
                     // Param1 = Link of file
-                    new System.Uri("https://github.com/NinjaCheetah/NCX-Core/releases/latest/download/NCXCore-Setup.msi"),
+                    new System.Uri("https://github.com/NCX-Programming/NCX-Core/releases/latest/download/NCXCore-Setup.msi"),
                     // Param2 = Path to save
                     System.IO.Path.Combine(SavePath, "NCXCore-Setup.msi")
                 );
