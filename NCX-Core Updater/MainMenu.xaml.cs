@@ -27,17 +27,18 @@ namespace NCX_Core_Updater
         public string releaseNum;
         public string nightlyNum;
         static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        static readonly string DocPath = SavePath + "/NCX-Core/NCXCoreUpdater/data/";
         static readonly string ProgFilesPath = "C:/Program Files/NCX/NCX-Core/";
 
         public MainMenu()
         {
             InitializeComponent();
             // Read latest release and set to the latest release label
-            string text = File.ReadAllText(System.IO.Path.Combine(SavePath, "updateNotice.txt"));
+            string text = File.ReadAllText(System.IO.Path.Combine(DocPath, "updateNotice.txt"));
             releaseNum = Convert.ToString(text);
             label1.Content = "Latest Release: " + releaseNum;
             // Read latest nightly and set to the latest nightly label
-            TextReader tr = new StreamReader(System.IO.Path.Combine(SavePath, "nightlyNotice.txt"));
+            TextReader tr = new StreamReader(System.IO.Path.Combine(DocPath, "nightlyNotice.txt"));
             string nnumString = tr.ReadLine();
             nightlyNum = Convert.ToString(nnumString);
             tr.Close();
@@ -53,7 +54,7 @@ namespace NCX_Core_Updater
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             label3.Content = "Fetching release data...";
-            string text = File.ReadAllText(System.IO.Path.Combine(SavePath, "version.txt"));
+            string text = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/version.txt"));
             updateNum = Convert.ToString(text);
             if (updateNum == releaseNum)
             {
@@ -114,7 +115,7 @@ namespace NCX_Core_Updater
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
             label3.Content = "Fetching nightly data...";
-            string text = File.ReadAllText(System.IO.Path.Combine(SavePath, "version.txt"));
+            string text = File.ReadAllText(System.IO.Path.Combine(SavePath, "NCX-Core/version.txt"));
             nupdateNum = Convert.ToString(text);
             if (nupdateNum == nightlyNum)
             {

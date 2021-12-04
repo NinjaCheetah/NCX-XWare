@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -23,6 +24,7 @@ namespace XWare
     public partial class MainWindow : Window
     {
         static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        static readonly string DocPath = SavePath + "/NCX-Core/NCXNewsPlus/data/";
 
         public class News
         {
@@ -50,6 +52,10 @@ namespace XWare
         public MainWindow()
         {
             InitializeComponent();
+            if (!Directory.Exists(DocPath))
+            {
+                Directory.CreateDirectory(DocPath);
+            }
             using (WebClient wc = new WebClient())
             {
                 wc.DownloadFileCompleted += DownloadCompleted;
@@ -57,14 +63,14 @@ namespace XWare
                     // Param1 = Link of file
                     new System.Uri("https://github.com/NinjaCheetah/NCX-Installer-News/releases/latest/download/newsFull.json"),
                     // Param2 = Path to save
-                    System.IO.Path.Combine(SavePath, "newsFull.json")
+                    System.IO.Path.Combine(DocPath, "newsFull.json")
                 );
             }
         }
 
         public void DownloadCompleted(object sender, EventArgs e)
         {
-            string json = System.IO.File.ReadAllText(System.IO.Path.Combine(SavePath, "newsFull.json"));
+            string json = System.IO.File.ReadAllText(System.IO.Path.Combine(DocPath, "newsFull.json"));
             News news = JsonConvert.DeserializeObject<News>(json);
 
             label2.Content = (news.Edition);

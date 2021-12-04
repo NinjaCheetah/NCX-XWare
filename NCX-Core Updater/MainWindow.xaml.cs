@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Threading;
 using System.Net;
+using System.IO;
 
 namespace NCX_Core_Updater
 {
@@ -23,10 +24,15 @@ namespace NCX_Core_Updater
     public partial class MainWindow : Window
     {
         static readonly string SavePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        static readonly string DocPath = SavePath + "/NCX-Core/NCXCoreUpdater/data/";
 
         public MainWindow()
         {
             InitializeComponent();
+            if (!Directory.Exists(DocPath))
+            {
+                Directory.CreateDirectory(DocPath);
+            }
             using (WebClient wc = new WebClient())
             {
                 wc.DownloadFileCompleted += DownloadCompleted;
@@ -34,7 +40,7 @@ namespace NCX_Core_Updater
                     // Param1 = Link of file
                     new System.Uri("https://github.com/NinjaCheetah/NCX-Installer-News/releases/latest/download/nightlyNotice.txt"),
                     // Param2 = Path to save
-                    System.IO.Path.Combine(SavePath, "nightlyNotice.txt")
+                    System.IO.Path.Combine(DocPath, "nightlyNotice.txt")
                 );
             }
         }
@@ -48,7 +54,7 @@ namespace NCX_Core_Updater
                     // Param1 = Link of file
                     new System.Uri("https://github.com/NinjaCheetah/NCX-Installer-News/releases/latest/download/updateNotice.txt"),
                     // Param2 = Path to save
-                    System.IO.Path.Combine(SavePath, "updateNotice.txt")
+                    System.IO.Path.Combine(DocPath, "updateNotice.txt")
                 );
             }
         }
